@@ -11,12 +11,12 @@ variable "default_tags" {
 
 variable "a_records" {
   description = "A map of A records to create"
-  type        = map(object({
-    content  = string
-    ttl      = optional(number)
-    proxied  = optional(bool)
-    comment  = optional(string)
-    tags     = optional(list(string))
+  type = map(object({
+    content = string
+    ttl     = optional(number)
+    proxied = optional(bool)
+    comment = optional(string)
+    tags    = optional(list(string))
     settings = optional(object({
       algorithm              = optional(string)
       answer_data            = optional(string)
@@ -30,17 +30,17 @@ variable "a_records" {
       validate_answer        = optional(bool)
     }))
   }))
-  default     = {}
+  default = {}
 }
 
 variable "cname_records" {
   description = "A map of CNAME records to create"
-  type        = map(object({
-    content  = string
-    ttl      = optional(number)
-    proxied  = optional(bool)
-    comment  = optional(string)
-    tags     = optional(list(string))
+  type = map(object({
+    content = string
+    ttl     = optional(number)
+    proxied = optional(bool)
+    comment = optional(string)
+    tags    = optional(list(string))
     settings = optional(object({
       algorithm              = optional(string)
       answer_data            = optional(string)
@@ -54,12 +54,12 @@ variable "cname_records" {
       validate_answer        = optional(bool)
     }))
   }))
-  default     = {}
+  default = {}
 }
 
 variable "mx_records" {
   description = "A map of MX records to create"
-  type        = map(object({
+  type = map(object({
     name     = optional(string)
     content  = string
     ttl      = optional(number)
@@ -67,33 +67,33 @@ variable "mx_records" {
     comment  = optional(string)
     tags     = optional(list(string))
   }))
-  default     = {}
+  default = {}
 }
 
 variable "txt_records" {
   description = "A map of TXT records to create"
-  type        = map(object({
+  type = map(object({
     content = string
     ttl     = optional(number)
     comment = optional(string)
     tags    = optional(list(string))
   }))
-  default     = {}
+  default = {}
 }
 variable "ns_records" {
   description = "A map of NS records to create"
-  type        = map(object({
+  type = map(object({
     content = string
     ttl     = optional(number)
     comment = optional(string)
     tags    = optional(list(string))
   }))
-  default     = {}
+  default = {}
 }
 
 variable "srv_records" {
   description = "A map of SRV records to create"
-  type        = map(object({
+  type = map(object({
     service  = string
     proto    = string
     name     = string
@@ -105,5 +105,5 @@ variable "srv_records" {
     comment  = optional(string)
     tags     = optional(list(string))
   }))
-  default     = {}
+  default = {}
 }
