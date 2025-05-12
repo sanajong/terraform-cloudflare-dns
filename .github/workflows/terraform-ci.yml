@@ -1,4 +1,4 @@
-name: Terraform CI with Cost Estimation
+name: Terraform CI Pipeline
 
 on:
   push:

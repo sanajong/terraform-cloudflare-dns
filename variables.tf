@@ -91,19 +91,19 @@ variable "ns_records" {
   default = {}
 }
 
-variable "srv_records" {
-  description = "A map of SRV records to create"
-  type = map(object({
-    service  = string
-    proto    = string
-    name     = string
-    priority = optional(number)
-    weight   = optional(number)
-    port     = number
-    target   = string
-    ttl      = optional(number)
-    comment  = optional(string)
-    tags     = optional(list(string))
-  }))
-  default = {}
-}
+#variable "srv_records" {
+#  description = "A map of SRV records to create"
+#  type = map(object({
+#    service  = string
+#    proto    = string
+#    name     = string
+#    priority = optional(number)
+#    weight   = optional(number)
+#    port     = number
+#    target   = string
+#    ttl      = optional(number)
+#    comment  = optional(string)
+#    tags     = optional(list(string))
+#  }))
+#  default = {}
+#}
