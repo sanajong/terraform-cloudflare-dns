@@ -1,4 +1,4 @@
-# terraform-cloudflare-dns
+# terraform-cloudflare-dns module
 
 A reusable [Terraform](https://www.terraform.io) module to manage **Cloudflare DNS records** using the official Cloudflare provider.
 
@@ -19,17 +19,17 @@ Include the module in your Terraform configuration:
 
 ```hcl
 module "cloudflare_dns" {
-  source  = "git::https://github.com/San-A-Jong/terraform-cloudflare-dns.git?ref=main"
-
-  cloudflare_email     = var.cloudflare_email
+  source  = "git::https://github.com/sanajong/terraform-cloudflare-dns.git?ref=main"
   cloudflare_api_token = var.cloudflare_api_token
   zone_id              = var.zone_id
   dns_records          = var.dns_records
 }
+```
 
-variable "cloudflare_email" {}
+Example Variables
+```hcl
 variable "cloudflare_api_token" {}
-variable "zone_id" {}
+variable "zone_id" {} # the cloudflare zone ID of the domain
 
 variable "dns_records" {
   type = list(object({
@@ -40,7 +40,10 @@ variable "dns_records" {
     proxied = bool
   }))
 }
+```
+Example DNS records
 
+```hcl
 dns_records = [
   {
     name    = "www"
