@@ -4,6 +4,9 @@ A reusable [Terraform](https://www.terraform.io) module to manage **Cloudflare D
 
 ---
 
+[![Terraform CI](https://github.com/sanajong/terraform-cloudflare-dns/actions/workflows/terraform-ci.yml/badge.svg)](https://github.com/sanajong/terraform-cloudflare-dns/actions/workflows/terraform-ci.yml)
+
+
 ## 🔧 Features
 
 - Supports multiple DNS record types (`A`, `AAAA`, `CNAME`, `TXT`, etc.)
