@@ -57,3 +57,11 @@ dns_records = [
     proxied = false
   }
 ]
+```
+
+## 📦 Requirements
+- Terraform 1.0+
+- Cloudflare API Token with permission to manage DNS for the specified zone
+
+## 🔐 Security
+Avoid hardcoding your credentials. Use environment variables, .tfvars, or secret managers to inject values securely.
